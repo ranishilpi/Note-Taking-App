@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Add
+{% endblock %}
+
+
+{% block content %}
+
+<form action="{{url_for('add')}}" method="post"> 
+    <div class="form">
+        <input id="noteid" type="text" name="note" placeholder="Enter a note">
+        <button id="button">Add note</button>
+    </div>
+    
+    
+</form>
+
+{% endblock %}

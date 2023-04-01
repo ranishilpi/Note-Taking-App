@@ -1,0 +1,17 @@
+From app.py, remove methods=['POST'], render_template(home.html)
+In app.py, add
+@app.route('/')
+def home_fun():
+   return render_template('home.html')
+
+notes = []
+
+@app.route('/check')
+def index():
+    note = request.args.get("note")
+    notes.append(note)
+    return f"{notes}"
+
+
+From home.html, remove ul and li
+add this [form action="{{url_for('index')}}"]

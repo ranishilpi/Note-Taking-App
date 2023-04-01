@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Search
+{% endblock %}
+
+
+{% block content %}
+<form> 
+    <div class="form">
+        <input class="for_search" type="text" name="note" placeholder="Enter a note">
+        <button class="search">Search note</button>
+    </div>
+</form>
+  <div id="search_n">
+    {{note}}
+  </div>
+  
+{% endblock %}
